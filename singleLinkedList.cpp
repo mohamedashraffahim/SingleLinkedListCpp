@@ -105,7 +105,7 @@ public:
             insertAtHead(n);
             return;
         }
-        if (index == size() - 1)
+        if (index == size() + 1)
         {
             insertAtTail(n);
             return;
@@ -358,10 +358,11 @@ int main()
     a.insertAtHead(1);
     a.insertAtTail(3);
     a.insertAtTail(4);
+    a.insertAt(55, 3);
     // a.replaceAt(55, 4);
     // cout << a.isExist(5);
     // cout << a.isItemAtEqual(5, 1);
-    a.swap(2, 1);
+    // a.swap(2, 1);
     a.print();
     // a.insertAt(555, 4);
     // a.removeAt(1);
