@@ -226,7 +226,7 @@ public:
     }
     void swap(int i1, int i2)
     {
-        node *tmp = head, *tmp2 = head, *tmp3 = head, *tmp4 = head, *tmp5 = head;
+        node *tmp = head, *tmp2 = head, *tmp3 = head, *tmp4 = head;
         int y = 0;
         if ((i1 == 1 && i2 == 2) || (i1 == 2 && i2 == 1))
         {
@@ -265,45 +265,14 @@ public:
                 tmp4->next = tmp2;
             }
         }
-        else
-        {
-            if (i1 == 1 || i2 == 1)
-            {
-                insertAtHead(55);
-                i1++;
-                i2++;
-                y = 1;
-            }
-            while (--i1)
-            {
-                tmp3 = tmp;
-                if (tmp->next != NULL)
-                    tmp = tmp->next;
-            }
-            while (--i2)
-            {
-                tmp4 = tmp2;
-                if (tmp2->next != NULL)
-                    tmp2 = tmp2->next;
-            }
-            tmp5 = tmp2->next;
-            tmp3->next = tmp2;
-            tmp4->next = tmp;
-            tmp2->next = tmp->next;
-            tmp->next = tmp5;
-            if (y == 1)
-                removeAtHead();
-        }
         tmp = NULL;
         tmp2 = NULL;
         tmp3 = NULL;
         tmp4 = NULL;
-        tmp5 = NULL;
         delete tmp;
         delete tmp2;
         delete tmp3;
         delete tmp4;
-        delete tmp5;
     }
     void clear()
     {
@@ -350,7 +319,7 @@ int main()
     // a.replaceAt(55, 4);
     // cout << a.isExist(5);
     // cout << a.isItemAtEqual(5, 1);
-    a.swap(1, 3);
+    a.swap(1, 4);
     a.print();
     // a.insertAt(555, 4);
     // a.removeAt(1);
