@@ -172,6 +172,11 @@ public:
             removeAtHead();
             return;
         }
+        if (i == size())
+        {
+            removeAtTail();
+            return;
+        }
         while (--i)
         {
             tmp2 = tmp;
