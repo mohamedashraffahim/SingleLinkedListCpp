@@ -226,11 +226,10 @@ public:
     }
     void swap(int i1, int i2)
     {
-        node *tmp = head, *tmp2 = head, *tmp3, *tmp4, *tmp5;
+        node *tmp = head, *tmp2 = head, *tmp3 = head, *tmp4 = head, *tmp5 = head;
         int y = 0;
         if ((i1 == 1 && i2 == 2) || (i1 == 2 && i2 == 1))
         {
-            node *tmp = head, *tmp2;
             tmp2 = head->next;
             tmp->next = tmp2->next;
             tmp2->next = tmp;
@@ -240,7 +239,6 @@ public:
         {
             if (i1 == 1 && i2 != 1)
             {
-                node *tmp = head, *tmp2 = head, *tmp3 = head, *tmp4 = head;
                 while (--i2)
                 {
                     tmp3 = tmp4;
@@ -266,21 +264,6 @@ public:
                 tmp3->next = tmp;
                 tmp4->next = tmp2;
             }
-        }
-        else if (i1 == 1 && i2 == size())
-        {
-            tmp = head->next;
-            while (tmp2 != tail)
-            {
-                tmp3 = tmp2;
-                tmp2 = tmp2->next;
-            }
-            tmp4 = head;
-            head = tail;
-            tail = tmp4;
-            head->next = tmp;
-            tmp3->next = tail;
-            tail->next = NULL;
         }
         else
         {
@@ -363,11 +346,11 @@ int main()
     a.insertAtHead(1);
     a.insertAtTail(3);
     a.insertAtTail(4);
-    a.insertAt(55, 3);
+    // a.insertAt(55, 3);
     // a.replaceAt(55, 4);
     // cout << a.isExist(5);
     // cout << a.isItemAtEqual(5, 1);
-    // a.swap(2, 1);
+    a.swap(1, 3);
     a.print();
     // a.insertAt(555, 4);
     // a.removeAt(1);
